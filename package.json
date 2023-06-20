@@ -23,7 +23,8 @@
     "lint:typescript": "ts-standard",
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js",
-    "build": "tsup --clean && vitest",
+    "build": "tsup --clean && vitest --run && pnpm unit",
+    "dev": "vitest",
     "prepublish": "pnpm build"
   },
   "keywords": [
@@ -34,7 +35,7 @@
   "author": "jessekrubin",
   "license": "MIT",
   "dependencies": {
-    "fastify-plugin": "^3.0.0"
+    "fastify-plugin": "^4.5.0"
   },
   "files": [
     "dist",
@@ -42,13 +43,15 @@
   ],
   "devDependencies": {
     "@types/node": "^16.6.2",
-    "fastify": "^3.20.2",
+    "fastify": "^4.18.0",
     "fastify-tsconfig": "^1.0.1",
-    "standard": "^16.0.3",
-    "tap": "^15.0.9",
-    "ts-standard": "^10.0.0",
-    "tsd": "^0.17.0",
-    "typescript": "^4.2.4"
+    "standard": "^17.1.0",
+    "tap": "^16.3.6",
+    "ts-standard": "^12.0.2",
+    "tsd": "^0.28.1",
+    "tsup": "^7.0.0",
+    "typescript": "^5.1.3",
+    "vitest": "^0.32.2"
   },
   "tsd": {
     "directory": "test"

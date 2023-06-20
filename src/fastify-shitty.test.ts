@@ -28,5 +28,4 @@ test('fastify-shitty', async t => {
   }
   await Promise.all(Array.from(Array(nreqs).keys()).map(mkreq))
   expect(nerrors).toBeGreaterThan(0)
-
 })
