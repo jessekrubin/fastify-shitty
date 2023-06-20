@@ -1,9 +1,32 @@
 {
-    "extends": "fastify-tsconfig",
-    "compilerOptions": {
-      "noEmit": true
-    },
-    "include": [
-        "**/*.ts"
-    ]
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ES2020", "ESNext"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "./dist/cjs",
+    "preserveSymlinks": true,
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2020",
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
+  }
 }
