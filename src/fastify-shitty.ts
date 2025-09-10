@@ -31,10 +31,6 @@ export const fastifyShittyAsync: FastifyPluginAsync<
       done(err)
     }
   })
-
-  fastify.decorate('exampleDecorator', () => {
-    return 'decorated'
-  })
 }
 
 export const FastifyShitty = fp(fastifyShittyAsync, {
