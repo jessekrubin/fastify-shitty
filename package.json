@@ -32,7 +32,7 @@
   "scripts": {
     "fmt": "prettier --write .",
     "fmtc": "prettier --check .",
-    "test": "pnpm run test && pnpm run build && pnpm run lint",
+    "test": "vitest run && pnpm run build && pnpm run lint",
     "lint": "eslint .",
     "build": "tsc --noEmit && tsdown --dts --clean && vitest --run",
     "dev": "vitest",
