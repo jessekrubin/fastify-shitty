@@ -32,7 +32,7 @@
   "scripts": {
     "test": "pnpm run test && pnpm run build && pnpm run lint",
     "lint": "eslint .",
-    "build": "tsc --noEmit && tsdown --clean && vitest --run",
+    "build": "tsc --noEmit && tsdown --dts --clean && vitest --run",
     "dev": "vitest",
     "prepublish": "pnpm build"
   },
