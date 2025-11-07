@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "./*.cjs",
+    "./.*.cjs",
+    "./*.js",
+    "./*.mjs",
+    "./*.mts",
+    "./*.ts",
+    "./*.config.cjs",
+    "./*.config.js",
+    "./*.config.mjs",
+    "./*.config.mts",
+    "./*.config.ts",
+    "./.eslintrc.cjs",
+    "./.eslintrc.js"
+  ],
+  "exclude": ["./fixtures/**/*.*"]
+}

@@ -10,20 +10,6 @@ export default jsse(
     reportUnusedDisableDirectives: true,
     off: ["dot-notation"],
     prettier: true,
-    // gitignore: {
-    //   files: [".gitignore"],
-    //   strict: true,
-    //   root: true
-    // }
     stylistic: false,
   },
-  /**
-   * overrides
-   */
-  // ...[
-  //   {
-  //     files: ["*.ts", "*.tsx"],
-  //     rules: {}
-  //   }
-  // ]
 );

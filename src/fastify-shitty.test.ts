@@ -1,5 +1,5 @@
-import { test, expect } from "vitest";
 import Fastify from "fastify";
+import { expect, test } from "vitest";
 import { FastifyShitty } from "./fastify-shitty.js";
 
 test("fastify-shitty", async () => {
@@ -22,6 +22,8 @@ test("fastify-shitty", async () => {
       nerrors++;
     }
   };
-  await Promise.all(Array.from(Array(nreqs).keys()).map(mkreq));
+  await Promise.all([...Array.from({length: nreqs}).keys()].map(
+    () => mkreq(),
+  ));
   expect(nerrors).toBeGreaterThan(0);
 });
