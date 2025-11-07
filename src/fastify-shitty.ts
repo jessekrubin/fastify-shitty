@@ -1,43 +1,45 @@
-import type { FastifyPluginAsync } from 'fastify'
-import fp from 'fastify-plugin'
+import type { FastifyPluginAsync } from "fastify";
+import fp from "fastify-plugin";
 
 export type FastifyShittyOptions = {
-  odds?: number
-  delay?: boolean
-}
-export const pluginName = '@jsse/fastify-shitty'
+  odds?: number;
+  delay?: boolean;
+};
+export const pluginName = "@jsse/fastify-shitty";
 const DEFAULT_OPTS: Required<FastifyShittyOptions> = {
   odds: 0.2,
-  delay: true
-}
+  delay: true,
+};
 
-export const fastifyShittyAsync: FastifyPluginAsync<FastifyShittyOptions> = async (fastify, opts) => {
-  const shittyLog = fastify.log.child({ plugin: pluginName })
+export const fastifyShittyAsync: FastifyPluginAsync<
+  FastifyShittyOptions
+> = async (fastify, opts) => {
+  const shittyLog = fastify.log.child({ plugin: pluginName });
 
-  const { odds , delay } = { ...DEFAULT_OPTS, ...opts }
-  fastify.addHook('onRequest', (_request, _reply, done) => {
-    const rand = Math.random()
+  const { odds, delay } = { ...DEFAULT_OPTS, ...opts };
+  fastify.addHook("onRequest", (_request, _reply, done) => {
+    const rand = Math.random();
     const err =
-      rand > odds ? undefined : new Error('Houston we have a problem...')
+      rand > odds ? undefined : new Error("Houston we have a problem...");
     if (delay) {
-      const delay = Math.floor(rand * 1000)
-      shittyLog.info(`Delaying response by ${delay}ms`)
+      const delay = Math.floor(rand * 1000);
+      shittyLog.info(`Delaying response by ${delay}ms`);
       setTimeout(
         () => {
-          done(err)
+          done(err);
         },
 
-        delay
-      )
+        delay,
+      );
     } else {
-      done(err)
+      done(err);
     }
-  })
-}
+  });
+};
 
 export const FastifyShitty = fp(fastifyShittyAsync, {
-  fastify: '5.x',
-  name: pluginName
-})
+  fastify: "5.x",
+  name: pluginName,
+});
 
-export default FastifyShitty
+export default FastifyShitty;
