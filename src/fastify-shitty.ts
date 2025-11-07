@@ -1,19 +1,21 @@
-import type { FastifyInstance, FastifyPluginAsync } from 'fastify'
+import type { FastifyPluginAsync } from 'fastify'
 import fp from 'fastify-plugin'
 
+export type FastifyShittyOptions = {
+  odds?: number
+  delay?: boolean
+}
 export const pluginName = '@jsse/fastify-shitty'
-export const defaultOpts = {
+const DEFAULT_OPTS: Required<FastifyShittyOptions> = {
   odds: 0.2,
   delay: true
 }
 
-export const fastifyShittyAsync: FastifyPluginAsync<
-  typeof defaultOpts
-> = async (fastify, opts) => {
+export const fastifyShittyAsync: FastifyPluginAsync<FastifyShittyOptions> = async (fastify, opts) => {
   const shittyLog = fastify.log.child({ plugin: pluginName })
-  const options = { ...defaultOpts, ...opts }
-  const { odds, delay } = options
-  fastify.addHook('onRequest', (request, reply, done) => {
+
+  const { odds , delay } = { ...DEFAULT_OPTS, ...opts }
+  fastify.addHook('onRequest', (_request, _reply, done) => {
     const rand = Math.random()
     const err =
       rand > odds ? undefined : new Error('Houston we have a problem...')
@@ -34,7 +36,7 @@ export const fastifyShittyAsync: FastifyPluginAsync<
 }
 
 export const FastifyShitty = fp(fastifyShittyAsync, {
-  fastify: '4.x',
+  fastify: '5.x',
   name: pluginName
 })
 

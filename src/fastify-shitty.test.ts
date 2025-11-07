@@ -4,13 +4,13 @@ import {
 import Fastify from 'fastify'
 import {
   FastifyShitty
-} from './fastify-shitty'
+} from './fastify-shitty.js'
 
-test('fastify-shitty', async t => {
+test('fastify-shitty', async () => {
   const fastify = Fastify()
   await fastify.register(FastifyShitty)
 
-  fastify.get('/', {}, (request, reply) => {
+  fastify.get('/', {}, (_request, reply) => {
     reply.send({ hello: 'world' })
   })
   await fastify.ready()
