@@ -1,7 +1,7 @@
 {
   "name": "@jsse/fastify-shitty",
   "type": "module",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": false,
   "description": "Plugin to make fastify shittier",
   "author": "jessekrubin",
