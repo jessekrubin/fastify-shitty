@@ -8,7 +8,7 @@ errors randomly and/or delays sending responses.
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-Supports Fastify versions `3.x`
+Supports Fastify versions `5.x`
 
 ## Install
 
