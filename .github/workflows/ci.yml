@@ -62,3 +62,16 @@ jobs:
 
       - name: fmt-check
         run: pnpm fmtc
+
+  automerge:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3
+        with:
+          target: "minor"
