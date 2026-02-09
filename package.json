@@ -42,7 +42,7 @@
     "fastify-plugin": "^5.1.0"
   },
   "devDependencies": {
-    "@jsse/eslint-config": "^0.4.22",
+    "@jsse/eslint-config": "^0.5.0",
     "@jsse/tsconfig": "^0.4.0",
     "@types/node": "^24.10.0",
     "eslint": "^9.39.1",
