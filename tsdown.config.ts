@@ -9,4 +9,6 @@ export default defineConfig({
   outDir: "dist",
   clean: true,
   tsconfig: "./tsconfig.json",
+  outputOptions: { exports: "named" },
+  deps: { neverBundle: ["fastify-plugin", "fastify"] },
 });

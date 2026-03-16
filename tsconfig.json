@@ -1,9 +1,6 @@
 {
   "extends": "@jsse/tsconfig",
-  "compilerOptions": {
-    "outDir": "dist",
-    "skipLibCheck": true
-  },
+  "compilerOptions": { "outDir": "dist", "skipLibCheck": true },
   "include": ["src/**/*.ts", "test/**/*.ts"],
   "exclude": ["./fixtures/**/*.*"]
 }

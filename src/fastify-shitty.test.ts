@@ -14,10 +14,7 @@ test("fastify-shitty", async () => {
   const nreqs = 500;
   let nerrors = 0;
   const mkreq = async () => {
-    const res = await fastify.inject({
-      method: "GET",
-      url: "/",
-    });
+    const res = await fastify.inject({ method: "GET", url: "/" });
     if (res.statusCode !== 200) {
       nerrors++;
     }
