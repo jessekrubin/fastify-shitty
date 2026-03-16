@@ -1,19 +1,13 @@
-import type { FastifyPluginAsync } from "fastify";
+import type { FastifyPluginAsync, FastifyPluginCallback } from "fastify";
 import fp from "fastify-plugin";
 
-export type FastifyShittyOptions = {
-  odds?: number;
-  delay?: boolean;
-};
+export type FastifyShittyOptions = { odds?: number; delay?: boolean };
 export const pluginName = "@jsse/fastify-shitty";
-const DEFAULT_OPTS: Required<FastifyShittyOptions> = {
-  odds: 0.2,
-  delay: true,
-};
+const DEFAULT_OPTS: Required<FastifyShittyOptions> = { odds: 0.2, delay: true };
 
-export const fastifyShittyAsync: FastifyPluginAsync<
+export const fastifyShittyCallback: FastifyPluginCallback<
   FastifyShittyOptions
-> = async (fastify, opts) => {
+> = (fastify, opts, done) => {
   const shittyLog = fastify.log.child({ plugin: pluginName });
 
   const { odds, delay } = { ...DEFAULT_OPTS, ...opts };
@@ -34,6 +28,21 @@ export const fastifyShittyAsync: FastifyPluginAsync<
     } else {
       done(err);
     }
+  });
+  done();
+};
+
+export const fastifyShittyAsync: FastifyPluginAsync<
+  FastifyShittyOptions
+> = async (fastify, opts) => {
+  await new Promise<void>((resolve, reject) => {
+    fastifyShittyCallback(fastify, opts, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
   });
 };
 
