@@ -17,7 +17,7 @@ importers:
         version: 0.7.0(@typescript-eslint/typescript-estree@8.57.1(typescript@5.9.3))(@typescript-eslint/utils@8.57.1(eslint@9.39.4)(typescript@5.9.3))(eslint@9.39.4)(typescript@5.9.3)(vitest@4.1.1(@types/node@24.12.0)(vite@7.3.1(@types/node@24.12.0)(yaml@2.8.2)))
       '@jsse/tsconfig':
         specifier: ^0.4.0
-        version: 0.4.0
+        version: 0.4.1
       '@types/node':
         specifier: ^24.12.0
         version: 24.12.0
@@ -371,10 +371,9 @@ packages:
       eslint-plugin-react-refresh:
         optional: true
 
-  '@jsse/tsconfig@0.4.0':
-    resolution: {integrity: sha512-iMtBD6FaAQV7eS3IX7Qaml97CLthh1GPRBXCOh9X+cDrcAxQcLxJnX5vlyfd6VUuNpjrAmWczFLs9Z5hnRefAA==}
-    engines: {node: '>=20'}
-    hasBin: true
+  '@jsse/tsconfig@0.4.1':
+    resolution: {integrity: sha512-72n3PasGRMLRG8lDPW+pSbK9oOC5RCUDtIu18xSjXMlOVLv+cTFzTAICJ+9sYqfDu6bjQxqQZugvWXYjh2AIYQ==}
+    engines: {node: '>=22'}
 
   '@microsoft/tsdoc-config@0.18.1':
     resolution: {integrity: sha512-9brPoVdfN9k9g0dcWkFeA7IH9bbcttzDJlXvkf8b2OBzd5MueR1V2wkKBL0abn0otvmkHJC6aapBOTJDDeMCZg==}
@@ -2378,7 +2377,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@jsse/tsconfig@0.4.0': {}
+  '@jsse/tsconfig@0.4.1': {}
 
   '@microsoft/tsdoc-config@0.18.1':
     dependencies:
@@ -3295,6 +3294,10 @@ snapshots:
   fault@2.0.1:
     dependencies:
       format: 0.2.2
+
+  fdir@6.5.0(picomatch@4.0.4):
+    optionalDependencies:
+      picomatch: 4.0.4
 
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
