@@ -11,17 +11,23 @@
     "plugin",
     "fastify-plugin"
   ],
+  "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/fastify-shitty.js",
-      "require": "./dist/fastify-shitty.cjs"
+      "import": {
+        "types": "./dist/fastify-shitty.d.ts",
+        "default": "./dist/fastify-shitty.js"
+      },
+      "require": {
+        "types": "./dist/fastify-shitty.d.cts",
+        "default": "./dist/fastify-shitty.cjs"
+      }
     }
   },
   "main": "dist/fastify-shitty.cjs",
   "module": "dist/fastify-shitty.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/fastify-shitty.d.ts",
   "directories": {
     "test": "test"
   },
@@ -29,6 +35,9 @@
     "dist",
     "package.json"
   ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "fmt": "prettier --write .",
     "fmtc": "prettier --check .",
@@ -48,6 +57,7 @@
     "eslint": "^10.5.0",
     "fastify": "^5.8.5",
     "prettier": "^3.8.4",
+    "publint": "^0.3.21",
     "tsdown": "^0.22.3",
     "typescript": "^6.0.3",
     "vitest": "^4.1.9"
