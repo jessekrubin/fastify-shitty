@@ -2,6 +2,10 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    cooldown:
+      default-days: 2
+      exclude:
+        - "@jsse/*"
     schedule:
       interval: "weekly"
     # =============
