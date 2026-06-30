@@ -3,9 +3,12 @@ import { jsse } from "@jsse/eslint-config";
 export default jsse({
   ignores: ["**/dev"],
   debug: false,
-  typescript: { strict: true, tsconfig: ["tsconfig.json", "tsconfig.eslint.json"] },
+  typescript: {
+    strict: true,
+    tsconfig: ["tsconfig.json", "tsconfig.eslint.json"],
+  },
   reportUnusedDisableDirectives: true,
-  off: [] ,
+  off: [],
   prettier: true,
   stylistic: false,
 });
