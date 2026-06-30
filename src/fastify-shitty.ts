@@ -17,6 +17,7 @@ export const fastifyShittyCallback: FastifyPluginCallback<
       rand > odds ? undefined : new Error("Houston we have a problem...");
     if (delay) {
       const delay = Math.floor(rand * 1000);
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       shittyLog.info(`Delaying response by ${delay}ms`);
       setTimeout(
         () => {
