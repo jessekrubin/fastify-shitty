@@ -17,7 +17,7 @@ importers:
         version: 0.8.4(@typescript-eslint/typescript-estree@8.63.0(typescript@6.0.3))(@typescript-eslint/utils@8.63.0(eslint@10.6.0)(typescript@6.0.3))(@vitest/eslint-plugin@1.6.21(@typescript-eslint/eslint-plugin@8.62.1(@typescript-eslint/parser@8.62.1(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3)(vitest@4.1.9(@types/node@24.13.2)(vite@8.1.0(@types/node@24.13.2)(yaml@2.9.0))))(eslint@10.6.0)(typescript@6.0.3)
       '@jsse/tsconfig':
         specifier: ^0.5.1
-        version: 0.5.1
+        version: 0.5.2
       '@types/node':
         specifier: ^24.13.2
         version: 24.13.2
@@ -236,8 +236,8 @@ packages:
       eslint-plugin-react-refresh:
         optional: true
 
-  '@jsse/tsconfig@0.5.1':
-    resolution: {integrity: sha512-58EP7/0kF4IJqPZdD9BY4Ya3MNw9y/aMWvUqzjhUBQt84jT1WWR8UmOtmNupRRSwueHS79Q1ZXZQLbfZwcPyng==}
+  '@jsse/tsconfig@0.5.2':
+    resolution: {integrity: sha512-WIjVDHpCOIjOlVmB6GjpxipsXPbm7RdP/5L5C+/6Z/QriEnVZfWn8X063uPYNE0aSoDxPUPJjUmDPvyABLIqZQ==}
     engines: {node: '>=22'}
 
   '@napi-rs/wasm-runtime@1.1.6':
@@ -2209,7 +2209,7 @@ snapshots:
       - ts-declaration-location
       - typescript
 
-  '@jsse/tsconfig@0.5.1': {}
+  '@jsse/tsconfig@0.5.2': {}
 
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
