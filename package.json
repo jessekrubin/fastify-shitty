@@ -51,7 +51,7 @@
     "fastify-plugin": "^6.0.0"
   },
   "devDependencies": {
-    "@jsse/eslint-config": "^0.8.4",
+    "@jsse/eslint-config": "^0.9.5",
     "@jsse/tsconfig": "^0.5.1",
     "@types/node": "^24.13.2",
     "@vitest/eslint-plugin": "^1.6.20",
