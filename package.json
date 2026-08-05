@@ -61,14 +61,14 @@
     "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   },
-  "engines": {
-    "node": ">=22.0.0"
-  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "^11.20.0",
       "onFail": "download"
     }
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
