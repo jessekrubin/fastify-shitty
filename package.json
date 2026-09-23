@@ -48,23 +48,23 @@
     "fastify-plugin": "^6.0.0"
   },
   "devDependencies": {
-    "@jsse/eslint-config": "^0.9.16",
-    "@jsse/tsconfig": "^0.5.1",
-    "@types/node": "^24.13.2",
-    "@vitest/coverage-v8": "^4.1.10",
-    "@vitest/eslint-plugin": "^1.6.26",
-    "eslint": "^10.7.0",
-    "fastify": "^5.11.2",
-    "prettier": "^3.9.5",
-    "publint": "^0.3.21",
-    "tsdown": "^0.22.14",
+    "@jsse/eslint-config": "^0.9.24",
+    "@jsse/tsconfig": "^0.6.1",
+    "@types/node": "^26.6.2",
+    "@vitest/coverage-v8": "^5.0.1",
+    "@vitest/eslint-plugin": "^1.6.27",
+    "eslint": "^10.11.0",
+    "fastify": "^5.12.5",
+    "prettier": "^3.9.8",
+    "publint": "^0.3.24",
+    "tsdown": "^0.23.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.10"
+    "vitest": "^5.0.1"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "^11.20.0",
+      "version": "11.27.1",
       "onFail": "download"
     }
   },
