@@ -213,7 +213,7 @@ importers:
     devDependencies:
       '@jsse/eslint-config':
         specifier: ^0.9.24
-        version: 0.9.24(@typescript-eslint/typescript-estree@8.70.1(typescript@6.0.3))(@typescript-eslint/utils@8.70.1(eslint@10.11.0)(typescript@6.0.3))(eslint@10.11.0)(typescript@6.0.3)(vitest@5.0.1)
+        version: 0.9.25(@typescript-eslint/typescript-estree@8.70.1(typescript@6.0.3))(@typescript-eslint/utils@8.70.1(eslint@10.11.0)(typescript@6.0.3))(eslint@10.11.0)(typescript@6.0.3)(vitest@5.0.1)
       '@jsse/tsconfig':
         specifier: ^0.6.1
         version: 0.6.1
@@ -401,8 +401,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsse/eslint-config@0.9.24':
-    resolution: {integrity: sha512-Pgt2npsH4OgrLU2CSL4gPbx0hOQbF+SKre4hgQ2cs9w28bGTma545pnXSecUWpEhL2zXPD5cYnoW7dptAARdeQ==}
+  '@jsse/eslint-config@0.9.25':
+    resolution: {integrity: sha512-bclQM9xsfmYU+viR5b8dO8ECAO2KymZR2e0ejeJSmaDGPFh9wtyEYa7XxMzemL+PxrM/M+Nk1Ybyg5zig+K61w==}
     hasBin: true
     peerDependencies:
       '@eslint-react/eslint-plugin': ^5.6.0
@@ -2362,7 +2362,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@jsse/eslint-config@0.9.24(@typescript-eslint/typescript-estree@8.70.1(typescript@6.0.3))(@typescript-eslint/utils@8.70.1(eslint@10.11.0)(typescript@6.0.3))(eslint@10.11.0)(typescript@6.0.3)(vitest@5.0.1)':
+  '@jsse/eslint-config@0.9.25(@typescript-eslint/typescript-estree@8.70.1(typescript@6.0.3))(@typescript-eslint/utils@8.70.1(eslint@10.11.0)(typescript@6.0.3))(eslint@10.11.0)(typescript@6.0.3)(vitest@5.0.1)':
     dependencies:
       '@e18e/eslint-plugin': 0.8.1(eslint@10.11.0)
       '@eslint-community/eslint-plugin-eslint-comments': 4.8.1(eslint@10.11.0)
