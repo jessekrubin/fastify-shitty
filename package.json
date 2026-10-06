@@ -48,18 +48,18 @@
     "fastify-plugin": "^6.0.0"
   },
   "devDependencies": {
-    "@jsse/eslint-config": "^0.9.24",
+    "@jsse/eslint-config": "^0.9.27",
     "@jsse/tsconfig": "^0.6.1",
-    "@types/node": "^26.6.2",
-    "@vitest/coverage-v8": "^5.0.1",
+    "@types/node": "^26.6.4",
+    "@vitest/coverage-v8": "^5.0.3",
     "@vitest/eslint-plugin": "^1.6.27",
-    "eslint": "^10.11.0",
+    "eslint": "^10.12.0",
     "fastify": "^5.12.5",
-    "prettier": "^3.9.8",
-    "publint": "^0.3.24",
+    "prettier": "^3.9.9",
+    "publint": "^0.3.25",
     "tsdown": "^0.23.0",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.3"
   },
   "devEngines": {
     "packageManager": {

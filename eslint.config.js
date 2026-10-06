@@ -1,14 +1,22 @@
 import { jsse } from "@jsse/eslint-config";
 
-export default jsse({
-  ignores: ["**/dev"],
-  debug: false,
-  typescript: {
-    strict: true,
-    tsconfig: ["tsconfig.json", "tsconfig.eslint.json"],
+export default jsse(
+  {
+    ignores: ["**/dev"],
+    debug: false,
+    typescript: {
+      strict: true,
+      tsconfig: ["tsconfig.json", "tsconfig.eslint.json"],
+    },
+    reportUnusedDisableDirectives: true,
+    off: [],
+    prettier: true,
+    stylistic: false,
   },
-  reportUnusedDisableDirectives: true,
-  off: [],
-  prettier: true,
-  stylistic: false,
-});
+  {
+    files: ["./example.mjs"],
+    rules: {
+      "unused-imports/no-unused-vars": "off",
+    },
+  },
+);
