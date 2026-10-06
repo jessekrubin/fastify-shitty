@@ -11,4 +11,9 @@ export default jsse({
   off: [],
   prettier: true,
   stylistic: false,
+}, {
+  "files": ["./example.mjs"],
+  rules: {
+    "unused-imports/no-unused-vars": "off"
+  }
 });
